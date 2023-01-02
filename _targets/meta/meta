@@ -1,0 +1,33 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+.Random.seed|object|bd0608b05865c231|||||||||||||||
+combine_data_by_geog|function|0eb8c2c2cb9898b6|||||||||||||||
+divide_zero|function|ff3fc03221d9e9c3|||||||||||||||
+erase_water_washington|function|cd55f744856da6ee|||||||||||||||
+make_wa_counties_2020|function|0eadf5449cae84e6|||||||||||||||
+make_wa_pl_raw|function|abf756dce84d7ece|||||||||||||||
+make_wa_places_2020|function|63d0ae00c150d983|||||||||||||||
+make_wa_race_2020|function|940458e496540df8|||||||||||||||
+make_wa_state_2020|function|1583c05ab86a7f35|||||||||||||||
+make_wa_tracts_2020|function|fa140b73cdfc7eea|||||||||||||||
+output_pqt_wa_counties|stem|96755984ff5571ec|c85fabeda6883959|8c23826c48fae5f7|1565574496|data/outputs/wa-counties-census-2020.parquet|t19359.865493716s|a21493df8c7ec69e|11954799|file|local|vector|||0.06|This is an initial implementation of ParquetFeather file support andgeo metadata. This is tracking version 0.1.0 of the metadatahttpsgithub.comgeopandasgeoarrowspec. This metadataspecification may change and does not yet make stability promises.  Wedo not yet recommend using this in a production setting unless you areable to rewrite your ParquetFeather files.|
+output_pqt_wa_places|stem|62f1abd23aa7e480|db19221bfefd7900|b434b3d95809b5c7|-816144046|data/outputs/wa-places-census-2020.parquet|t19359.8654926847s|87df5c636d24eb0f|2484682|file|local|vector|||0.01|This is an initial implementation of ParquetFeather file support andgeo metadata. This is tracking version 0.1.0 of the metadatahttpsgithub.comgeopandasgeoarrowspec. This metadataspecification may change and does not yet make stability promises.  Wedo not yet recommend using this in a production setting unless you areable to rewrite your ParquetFeather files.|
+output_pqt_wa_state|stem|981e4d324a116644|8f3b25df31b64835|e43208e8db03d777|-569037910|data/outputs/wa-state-census-2020.parquet|t19359.8654881807s|164485046a5162ef|135903|file|local|vector|||0.2|This is an initial implementation of ParquetFeather file support andgeo metadata. This is tracking version 0.1.0 of the metadatahttpsgithub.comgeopandasgeoarrowspec. This metadataspecification may change and does not yet make stability promises.  Wedo not yet recommend using this in a production setting unless you areable to rewrite your ParquetFeather files.|
+output_pqt_wa_tracts|stem|ea4f3d37555e8a06|ab06811a36f791c8|f2baf0e98005e4bd|306608524|data/outputs/wa-tracts-census-2020.parquet|t19359.8654905255s|45799df5cbebd8fa|13959159|file|local|vector|||0.18|This is an initial implementation of ParquetFeather file support andgeo metadata. This is tracking version 0.1.0 of the metadatahttpsgithub.comgeopandasgeoarrowspec. This metadataspecification may change and does not yet make stability promises.  Wedo not yet recommend using this in a production setting unless you areable to rewrite your ParquetFeather files.|
+pkgs|object|697b6ad1a4357cd9|||||||||||||||
+target_pipeline|object|6c5b8727d57a060b|||||||||||||||
+wa_counties_2020|stem|5d4b10fa722572be|9dc28895b9eea89a|07370bbde3f0d792|703347268||t19359.8652795627s|9cbe558f87dd7ec2|7687293|qs|local|vector|||18.74||
+wa_counties_all|stem|f06e5e809949d918|3016253f23cfd0de|70cbcdeab7708aa4|1580386120||t19359.8654850508s|70b23e966a172eda|7686883|qs|local|vector|||0.02||
+wa_pl_file|stem|c4075b15b8c85bca|148219c62af829dd|ef46db3751d8e999|-1625667867|data/inputs/wa2020.pl/|t19344.9743218213s|bd9136953dbd47a6|320714238|file|local|vector|||0||
+wa_pl_raw|stem|29166bae588ca566|c16f1acc273f40ac|bffe84162707818a|1063720692||t19359.8654030838s|74673d74554a074c|17509564|qs|local|vector|||8.81||
+wa_places_2020|stem|32adceef724d2741|c016270ae40feeca|5d1ec686ad346b11|-1965794368||t19359.8641064657s|36fe5865b6ac281d|1566911|qs|local|vector|||24.31||
+wa_places_all|stem|d742728d0e82a603|5e38f9e9cbd4e9dd|29484001179718ca|-1324707473||t19359.8654839923s|93e6163c79018ad9|1615208|qs|local|vector|||0.02||
+wa_race_counties_2020|stem|91093dc3afa4fc2e|b8b3b2d7247ad120|ca5f383d5d11cb85|-1137570448||t19359.8654811339s|d90c93757969bf75|3744|qs|local|vector|||1.28||
+wa_race_places_2020|stem|934cfe384edc6d58|65bfa448fd83542d|ca5f383d5d11cb85|-1313611378||t19359.8654660339s|5813df212a8bf83e|51666|qs|local|vector|||1.25||
+wa_race_state_2020|stem|081cd93824007e4a|7ffa9aa406c9441c|ca5f383d5d11cb85|1121876890||t19359.8654315365s|30ed5b6f0c29cb62|367|qs|local|vector|||2.23||
+wa_race_tracts_2020|stem|e06ae03d7fdaf91e|98ee3fb17f9fbdc0|ca5f383d5d11cb85|-1257596632||t19359.8654511861s|9681b7688a26667a|143717|qs|local|vector|||1.67||
+wa_state_2020|stem|5d083d8c9b9c3980|8aaacb0754731651|3f6ab5bd9289fea8|800962489||t19359.8638207597s|56c9f48874dee1fb|83327|qs|local|vector|||0.56||
+wa_state_all|stem|a050826bcead9ec9|660571500fcb85fd|93dede85028d699a|-543961531||t19359.8654815604s|6ae9600ce5f7adbe|83597|qs|local|vector|||0.02||
+wa_tracts_2020|stem|e74c2ace4dd07ebf|fc434d0f1db35dad|dbf82a1f62e104f5|1188257378||t19359.8650616578s|f5e341a14515afec|8951553|qs|local|vector|||82.47||
+wa_tracts_all|stem|40810c083b4b2b86|88ba968f7300d59e|698d790158848fcb|1263466394||t19359.8654827617s|a9fffd6d0f4b88ac|9089233|qs|local|vector|||0.01||
+write_gpkg|function|39695c1eb7aeeb87|||||||||||||||
+write_parquet|function|f55fa7e1f9e9a841|||||||||||||||
