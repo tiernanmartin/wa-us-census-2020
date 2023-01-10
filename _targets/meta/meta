@@ -1,5 +1,5 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-.Random.seed|object|3385ad5a79be9bed|||||||||||||||
+.Random.seed|object|3af7465a5fdff130|||||||||||||||
 combine_data_by_geog|function|0eb8c2c2cb9898b6|||||||||||||||
 divide_zero|function|ff3fc03221d9e9c3|||||||||||||||
 erase_water_washington|function|cd55f744856da6ee|||||||||||||||
@@ -9,6 +9,7 @@ make_wa_pl_raw|function|abf756dce84d7ece|||||||||||||||
 make_wa_places|function|1dc62f2f5953baaa|||||||||||||||
 make_wa_places_2010|function|d64a0a220763ab3d|||||||||||||||
 make_wa_places_2020|function|63d0ae00c150d983|||||||||||||||
+make_wa_race_2010|function|94ae028c845af802|||||||||||||||
 make_wa_race_2020|function|940458e496540df8|||||||||||||||
 make_wa_state|function|563bf05ef08ff5b2|||||||||||||||
 make_wa_state_2020|function|1583c05ab86a7f35|||||||||||||||
@@ -19,9 +20,12 @@ output_pqt_wa_places|stem|62f1abd23aa7e480|db19221bfefd7900|b434b3d95809b5c7|-81
 output_pqt_wa_state|stem|981e4d324a116644|8f3b25df31b64835|e43208e8db03d777|-569037910|data/outputs/wa-state-census-2020.parquet|t19359.8654881807s|164485046a5162ef|135903|file|local|vector|||0.2|This is an initial implementation of ParquetFeather file support andgeo metadata. This is tracking version 0.1.0 of the metadatahttpsgithub.comgeopandasgeoarrowspec. This metadataspecification may change and does not yet make stability promises.  Wedo not yet recommend using this in a production setting unless you areable to rewrite your ParquetFeather files.|
 output_pqt_wa_tracts|stem|ea4f3d37555e8a06|ab06811a36f791c8|f2baf0e98005e4bd|306608524|data/outputs/wa-tracts-census-2020.parquet|t19359.8654905255s|45799df5cbebd8fa|13959159|file|local|vector|||0.18|This is an initial implementation of ParquetFeather file support andgeo metadata. This is tracking version 0.1.0 of the metadatahttpsgithub.comgeopandasgeoarrowspec. This metadataspecification may change and does not yet make stability promises.  Wedo not yet recommend using this in a production setting unless you areable to rewrite your ParquetFeather files.|
 pkgs|object|697b6ad1a4357cd9|||||||||||||||
-target_pipeline|object|83029e201579044e|||||||||||||||
+target_pipeline|object|dad34a7e376ac62c|||||||||||||||
+wa_2010_pl_file|stem|5d0d4b320d05503f|31fc91c6d5013bc0|ef46db3751d8e999|542013936|data/inputs/wa2010.pl/|t19367.0213669674s|a75e104011428481|4096|file|local|vector|||0||
+wa_2010_pl_raw|stem|69f59e61963238a4|01c4f3996611b171|b743967e53c22b80|-447810529||t19367.1303176439s|fe83e59d1d5839c9|18066010|qs|local|vector|||8.23||
 wa_2010_places_file|stem|fc3aef8b8ef2c127|26e7c9edb34efa1f|ef46db3751d8e999|630069677|data/inputs/tl_2010_53_place10/tl_2010_53_place10.shp|t19367.0194017664s|4cef01893b70231b|3962788|file|local|vector|||0.02||
 wa_2020_pl_file|stem|c4075b15b8c85bca|148219c62af829dd|ef46db3751d8e999|-417868267|data/inputs/wa2020.pl/|t19359.8624353554s|a75e104011428481|4096|file|local|vector|||0||
+wa_2020_pl_raw|stem|29166bae588ca566|a032e5f3cbc5f57e|b6224471747622ff|-83754466||t19367.1301993335s|74673d74554a074c|17509564|qs|local|vector|||9.1||
 wa_counties_2010|stem|fed4a77f938567d1|c3ef54c7e3896952|61f59c642fa8f05d|2029803915||t19367.014281069s|e43803e3bccb2506|7627209|qs|local|vector|||18.91||
 wa_counties_2020|stem|5d4b10fa722572be|cd81ac97c5d7fc9b|61f59c642fa8f05d|703347268||t19367.0122426924s|9cbe558f87dd7ec2|7687293|qs|local|vector|||19.64||
 wa_counties_all|stem|f06e5e809949d918|3016253f23cfd0de|70cbcdeab7708aa4|1580386120||t19359.8654850508s|70b23e966a172eda|7686883|qs|local|vector|||0.02||
@@ -30,10 +34,14 @@ wa_pl_raw|stem|29166bae588ca566|a032e5f3cbc5f57e|b6224471747622ff|1063720692||t1
 wa_places_2010|stem|e94d152810a09c11|d57a21e6b0235360|169fd14ba2aa670d|-927408324||t19367.0279157478s|13abc8c06246c5c2|3322813|qs|local|vector|||22.28||
 wa_places_2020|stem|32adceef724d2741|a3f30c19a6a86d0d|eed0fa32458c135d|-1965794368||t19367.0276567633s|36fe5865b6ac281d|1566911|qs|local|vector|||23.99||
 wa_places_all|stem|d742728d0e82a603|5e38f9e9cbd4e9dd|29484001179718ca|-1324707473||t19359.8654839923s|93e6163c79018ad9|1615208|qs|local|vector|||0.02||
-wa_race_counties_2020|stem|91093dc3afa4fc2e|b8b3b2d7247ad120|ca5f383d5d11cb85|-1137570448||t19359.8654811339s|d90c93757969bf75|3744|qs|local|vector|||1.28||
-wa_race_places_2020|stem|934cfe384edc6d58|65bfa448fd83542d|ca5f383d5d11cb85|-1313611378||t19359.8654660339s|5813df212a8bf83e|51666|qs|local|vector|||1.25||
-wa_race_state_2020|stem|081cd93824007e4a|7ffa9aa406c9441c|ca5f383d5d11cb85|1121876890||t19359.8654315365s|30ed5b6f0c29cb62|367|qs|local|vector|||2.23||
-wa_race_tracts_2020|stem|e06ae03d7fdaf91e|98ee3fb17f9fbdc0|ca5f383d5d11cb85|-1257596632||t19359.8654511861s|9681b7688a26667a|143717|qs|local|vector|||1.67||
+wa_race_counties_2010|stem|c6d70ce5ad5767c6|77d3006ba9cfa15d|193cafde26cf4198|401753027||t19367.130440715s|92c734d355399da0|3709|qs|local|vector|||1.25||
+wa_race_counties_2020|stem|91093dc3afa4fc2e|7f95031eacbd3896|f1d8f5e913986238|-1137570448||t19367.1303960471s|d90c93757969bf75|3744|qs|local|vector|||1.34||
+wa_race_places_2010|stem|f7b098d615bb24bb|fbfe169a958af972|193cafde26cf4198|1672822206||t19367.1304549859s|6e2d07e98a3bdd7c|47151|qs|local|vector|||1.21||
+wa_race_places_2020|stem|934cfe384edc6d58|fe803ee59ea174bd|f1d8f5e913986238|-1313611378||t19367.130348314s|5813df212a8bf83e|51666|qs|local|vector|||2.46||
+wa_race_state_2010|stem|9a5055e03e005828|e3ec164118b20f7c|193cafde26cf4198|-881230798||t19367.1304111154s|e334c4b74a456131|365|qs|local|vector|||1.28||
+wa_race_state_2020|stem|081cd93824007e4a|4d3f5da302cdfb49|f1d8f5e913986238|1121876890||t19367.1303639654s|30ed5b6f0c29cb62|367|qs|local|vector|||1.33||
+wa_race_tracts_2010|stem|4d71a83c2f20e7a6|5b63bb5a5fc8a96b|193cafde26cf4198|-290058302||t19367.1304261583s|8eb3e38752ca1b65|117367|qs|local|vector|||1.28||
+wa_race_tracts_2020|stem|e06ae03d7fdaf91e|6214427e5a974ed2|f1d8f5e913986238|-1257596632||t19367.1303799557s|9681b7688a26667a|143717|qs|local|vector|||1.38||
 wa_state_2010|stem|60c893219299062a|31dd93f39acc1ffd|c81f0f9dba58de47|686433402||t19367.0142846925s|5291b69c0cfc14fe|25024|qs|local|vector|||0.25||
 wa_state_2020|stem|5d083d8c9b9c3980|5f9bb90079e6a4c2|c81f0f9dba58de47|800962489||t19367.0117466873s|56c9f48874dee1fb|83327|qs|local|vector|||0.62||
 wa_state_all|stem|a050826bcead9ec9|660571500fcb85fd|93dede85028d699a|-543961531||t19359.8654815604s|6ae9600ce5f7adbe|83597|qs|local|vector|||0.02||
