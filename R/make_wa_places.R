@@ -4,13 +4,14 @@
 #'
 #' @title
 
+#' @param year
 #' @return
 #' @author Tiernan
 #' @export
-make_wa_places_2020 <- function() {
+make_wa_places <- function(year = 2020) {
 
 wa_places_raw <- tigris::places(state = 53, 
-                                year = 2020,
+                                year = year,
                                 cb = TRUE)
 
 wa_pl <- wa_places_raw |> 

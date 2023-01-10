@@ -4,12 +4,14 @@
 #'
 #' @title
 
+#' 
+#' @param year
 #' @return
 #' @author Tiernan
 #' @export
-make_wa_counties_2020 <- function() {
+make_wa_counties <- function(year = 2020) {
 
-  county_raw <- tigris::counties(state = 53, year = 2020, cb = TRUE)
+  county_raw <- tigris::counties(state = 53, year = year, cb = TRUE)
   
   county_clean <- county_raw |> 
     janitor::clean_names() |> 

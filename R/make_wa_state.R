@@ -4,12 +4,13 @@
 #'
 #' @title
 
+#' @param year
 #' @return
 #' @author Tiernan
 #' @export
-make_wa_state_2020 <- function() {
+make_wa_state <- function(year = 2020) {
 
-  states_raw <- tigris::states(year = 2020, cb = TRUE)
+  states_raw <- tigris::states(year = year, cb = TRUE)
   
   states <- states_raw |> 
     tibble::as_tibble() |> 

@@ -4,12 +4,13 @@
 #'
 #' @title
 
+#' @param year
 #' @return
 #' @author Tiernan
 #' @export
-make_wa_tracts_2020 <- function() {
+make_wa_tracts <- function(year = 2020) {
 
-  tr_raw <- tigris::tracts(state = 53, year = 2020, cb = TRUE)
+  tr_raw <- tigris::tracts(state = 53, year = year, cb = TRUE)
   
   tr_clean <- tr_raw |> 
     janitor::clean_names() |> 
