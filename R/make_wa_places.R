@@ -5,10 +5,11 @@
 #' @title
 
 #' @param year
+#' @param erase_water
 #' @return
 #' @author Tiernan
 #' @export
-make_wa_places <- function(year = 2020) {
+make_wa_places <- function(year = 2020, erase_water = FALSE) {
 
 wa_places_raw <- tigris::places(state = 53, 
                                 year = year,
@@ -19,10 +20,15 @@ wa_pl <- wa_places_raw |>
   sf::st_sf() |> 
   janitor::clean_names()
 
-wa_pl_nowater <- wa_pl |> 
-  erase_water_washington(area_threshold = .75)
+wa_places_ready <- wa_pl
 
-wa_places_ready <- wa_pl_nowater
+
+if(erase_water){
+  
+  wa_places_ready <- wa_pl |> 
+    erase_water_washington(area_threshold = .75)  
+  
+}
 
 return(wa_places_ready)
 
